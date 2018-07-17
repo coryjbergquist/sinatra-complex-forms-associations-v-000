@@ -23,6 +23,11 @@ class OwnersController < ApplicationController
     erb :'/owners/edit'
   end
 
+  get "/owners/:id" do 
+    erb :show
+  end
+  
+
   post '/owners/:id' do
     @owner = Owner.find(params[:id])
     @owner.update(params["owner"])
