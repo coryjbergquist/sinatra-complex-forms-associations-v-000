@@ -1,3 +1,5 @@
 
 Pet name: <%=@pet.name%><br>
-Owner name: <%=@pet.owner.name%>
+Owner name: <%if @pet.owner%>
+              <%=@pet.owner.name%>
+            <%end%>
